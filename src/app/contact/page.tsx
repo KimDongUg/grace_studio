@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Clock, MapPin, Phone, CreditCard } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import FadeIn from "@/components/FadeIn";
@@ -50,6 +51,29 @@ export default function ContactPage() {
           <BookingButton variant="phone" size="lg" />
           <BookingButton variant="kakao" size="lg" />
           <CopyAddressButton />
+        </FadeIn>
+
+        <FadeIn delay={0.35} className="mt-14 flex flex-wrap gap-8">
+          <div className="flex flex-col items-center gap-3 rounded-2xl border border-accent p-6">
+            <Image
+              src="/images/kakaopay-qr.png"
+              alt="Grace Studio 카카오페이 QR 코드"
+              width={160}
+              height={160}
+              className="rounded-xl"
+            />
+            <span className="text-sm font-medium text-text">Grace Studio 카카오페이</span>
+          </div>
+          <div className="flex flex-col items-center gap-3 rounded-2xl border border-accent p-6">
+            <Image
+              src="/images/kakao-chat-qr.jpg"
+              alt="Grace Studio 카카오톡 문의 QR 코드"
+              width={160}
+              height={160}
+              className="rounded-xl"
+            />
+            <span className="text-sm font-medium text-text">Grace Studio 카카오톡 문의</span>
+          </div>
         </FadeIn>
       </section>
     </>
